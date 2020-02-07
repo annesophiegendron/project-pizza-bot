@@ -11,27 +11,39 @@
 
 <body>
   <div class="main">
-    <section>
-      <h1>Welcome to our Pizzeria!</h1>
+    <section class="card1">
+      <h1 class="welcome-message">Welcome to our Pizzeria!</h1>
+      <ul>
+        <li>Vegetarian Pizza - 80 SEK</li>
+        <li>Hawaiian Pizza - 80 SEK</li>
+        <li>Pepperoni Pizza - 80 SEK</li>
+      </ul>
       <div class="main-button">
         <button id="orderButton">Order</button>
       </div>
-      <div class="container">
-        <figure>
-          <img src="images/vegetarian_pizza.jpg" alt="vegetarian pizza">
-          <figcaption>Vegetarian Pizza - 80 SEK</figcaption>
-        </figure>
-        <figure>
-          <img src="images/hawaiian-pizza2.jpg" alt="hawaiian pizza">
-          <figcaption>Hawaiian Pizza - 80 SEK</figcaption>
-        </figure>
-        <figure>
-          <img src="images/pepperoni_pizza.jpg" alt="pepperoni pizza">
-          <figcaption>Pepperoni Pizza - 80 SEK</figcaption>
-        </figure>
-      </div>
     </section>
-    <p id="order-confirmation"></p>
+    <section class="card2">
+      <form action="">
+        <label class="option" for="vegetarian">
+          <input id="vegetarian" type="checkbox">
+          <img src="images/vegetarian_pizza.jpg" alt="vegetarian pizza">
+          Vegetarian Pizza - 80 SEK
+        </label>
+        <label class="option" for="hawaiian">
+          <input id="hawaiian" type="checkbox">
+          <img src="images/hawaiian-pizza2.jpg" alt="hawaiian pizza">
+          Hawaiian Pizza - 80 SEK
+        </label>
+        <label class="option" for="pepperoni">
+          <input id="pepperoni" type="checkbox">
+          <img src="images/pepperoni_pizza.jpg" alt="pepperoni pizza">
+          Pepperoni Pizza - 80 SEK
+        </label>
+      </form>
+    </section>
+    <section class="card3">
+      <p id="order-confirmation"></p>
+    </section>
   </div>
   <script src="pizzabot.js"></script>
 </body>
