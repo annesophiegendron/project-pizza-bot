@@ -11,37 +11,37 @@
 
 <body>
   <div class="main">
-    <section class="card1">
+    <!--CARD ONE-->
+    <section class="card1 active">
       <h1 class="welcome-message">Welcome to our Pizzeria!</h1>
       <ul>
         <li>Vegetarian Pizza - 80 SEK</li>
         <li>Hawaiian Pizza - 80 SEK</li>
         <li>Pepperoni Pizza - 80 SEK</li>
       </ul>
-      <div class="main-button">
-        <button id="orderButton">Order</button>
-      </div>
+      <button class="orderButton">Order</button>
     </section>
-    <section class="card2">
-      <form action="">
-        <label class="option" for="vegetarian">
-          <input id="vegetarian" type="checkbox">
-          <img src="images/vegetarian_pizza.jpg" alt="vegetarian pizza">
-          Vegetarian Pizza - 80 SEK
-        </label>
-        <label class="option" for="hawaiian">
-          <input id="hawaiian" type="checkbox">
-          <img src="images/hawaiian-pizza2.jpg" alt="hawaiian pizza">
-          Hawaiian Pizza - 80 SEK
-        </label>
-        <label class="option" for="pepperoni">
-          <input id="pepperoni" type="checkbox">
-          <img src="images/pepperoni_pizza.jpg" alt="pepperoni pizza">
-          Pepperoni Pizza - 80 SEK
-        </label>
-      </form>
-    </section>
-    <section class="card3">
+    <!--CARD TWO-->
+    <form class="card2 hidden" onsubmit="event.preventDefault();">
+      <label class="option" for="vegetarian">
+        <input id="vegetarian" type="checkbox">
+        <img src="images/vegetarian_pizza.jpg" alt="vegetarian pizza">
+        Vegetarian Pizza - 80 SEK
+      </label>
+      <label class="option" for="hawaiian">
+        <input id="hawaiian" type="checkbox">
+        <img src="images/hawaiian-pizza2.jpg" alt="hawaiian pizza">
+        Hawaiian Pizza - 80 SEK
+      </label>
+      <label class="option" for="pepperoni">
+        <input id="pepperoni" type="checkbox">
+        <img src="images/pepperoni_pizza.jpg" alt="pepperoni pizza">
+        Pepperoni Pizza - 80 SEK
+      </label>
+      <button class="orderButton">Order</button>
+    </form>
+    <!--CARD THREE-->
+    <section class="card3 hidden">
       <p id="order-confirmation"></p>
     </section>
   </div>

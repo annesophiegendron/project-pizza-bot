@@ -6,15 +6,35 @@ const pizzaPrice = 80;
 
 console.log(vegetarian, hawaiian, pepperoni, pizzaPrice);
 
-let orderName;
 let orderQuantity;
 
-const startOrder = () => {
-  alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}.`);
-  orderName = prompt("Enter the name of the pizza you want to order today.");
-  console.log(orderName);
-  checkOrderName(orderName)
+const startOrder = (event) => {
+  const currentCard = event.target.parentElement
+  console.log(' current car', currentCard)
+  const nextCard = currentCard.nextElementSibling
+  // Hide the card1 - (toggle classname javascript)
+  currentCard.classList.remove("active");
+  currentCard.classList.add("hidden");
+  console.log({ "nextcard": nextCard })
+  // Show the card2
+  nextCard.classList.remove("hidden");
+  nextCard.classList.add("active");
 };
+// (search add event listener to multiple elements)
+const nextButtons = document.querySelectorAll(".orderButton");
+
+// add a listener to buttons
+for (let i = 0; i < nextButtons.length; i++) {
+  nextButtons[i].addEventListener("click", startOrder);
+}
+
+// add a third button + new function to go back to the firstcard + new function for the previous button
+
+
+
+
+
+
 
 const checkOrderName = (orderName) => {
   if (orderName === vegetarian || orderName === hawaiian || orderName === pepperoni) {
@@ -46,4 +66,3 @@ const showConfirmation = () => {
   document.getElementById("order-confirmation").innerHTML = (`Great! I'll get started on your ${orderName} pizza right away, it will cost ${totalCost()} kr. The pizzas will take ${getCookingTime()} minutes!`);
 };
 
-document.getElementById("orderButton").onclick = startOrder;
